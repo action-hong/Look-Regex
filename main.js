@@ -34,9 +34,22 @@ list.forEach(item => {
 chrome.contextMenus.onClicked.addListener((info) => {
   const item = list.find(item => item.id === info.menuItemId)
   if (item) {
-    const regex = new RegExp(info.selectionText)
+    /**
+     * @type {string}
+     */
+    let text = info.selectionText
+    let flag = ''
+    const lastIndex = text.lastIndexOf('/')
+    const firstIndex = text.indexOf('/')
+    // should select valid regext
+    if (lastIndex > -1) {
+      flag = text.slice(lastIndex + 1)
+      text = text.slice(firstIndex + 1, lastIndex + 1)
+    }
+    const regex = new RegExp(text, flag)
     chrome.tabs.create({
       url: item.url(regex)
     })
   }
 })
+
