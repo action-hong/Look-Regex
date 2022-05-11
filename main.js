@@ -1,7 +1,7 @@
 const list = [
   {
     id: 'goRegex101',
-    title: 'Go Regex 101',
+    title: 'Regex 101',
     url: (regex) => {
       return `https://regex101.com/?regex=${encodeURIComponent(regex.source)}&flag=${encodeURIComponent(regex.flags)}`
     }

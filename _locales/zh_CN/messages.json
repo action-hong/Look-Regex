@@ -1,0 +1,8 @@
+{
+  "appDesc": {
+    "message": "在浏览器上选择表达式，点击跳转到如regex101之类的网站"
+  },
+  "appName": {
+    "message": "Look Regex"
+  }
+}

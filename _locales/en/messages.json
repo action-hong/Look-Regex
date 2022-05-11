@@ -1,0 +1,9 @@
+{
+  "appDesc": {
+    "message": "An extension to select regex value and go to regex101.com or others",
+    "description": "The extension's description"
+  },
+  "appName": {
+    "message": "Look Regex"
+  }
+}
